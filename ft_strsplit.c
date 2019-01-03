@@ -6,7 +6,7 @@
 /*   By: fschille <fschille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 21:27:26 by fschille          #+#    #+#             */
-/*   Updated: 2019/01/01 18:00:45 by fschille         ###   ########.fr       */
+/*   Updated: 2019/01/02 15:47:48 by fschille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ static int	ft_check(char **res, int i)
 			ft_strdel(&res[j]);
 			j++;
 		}
-		free(*res);
+		free(res);
 		res = NULL;
 		return (1);
 	}

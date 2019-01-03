@@ -6,21 +6,21 @@
 /*   By: fschille <fschille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 16:58:15 by fschille          #+#    #+#             */
-/*   Updated: 2019/01/01 19:30:54 by fschille         ###   ########.fr       */
+/*   Updated: 2019/01/02 17:41:05 by fschille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static void	ft_del(void *content, size_t content_size)
+static void		ft_del(void *content, size_t content_size)
 {
 	free((char*)content);
 	content = NULL;
 	content_size = 0;
 }
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*start;
 	t_list	*new_list;

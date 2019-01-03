@@ -6,7 +6,7 @@
 /*   By: fschille <fschille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 23:45:10 by fschille          #+#    #+#             */
-/*   Updated: 2018/12/07 12:25:54 by fschille         ###   ########.fr       */
+/*   Updated: 2019/01/02 17:35:27 by fschille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-void				ft_swap(int *a, int *b);
 int					ft_intlen(int n);
-char				*ft_strrev(char *str);
-char				*ft_strlowcase(char *str);
-char				*ft_strupcase(char *str);
+void				ft_lstaddend(t_list **alst, t_list *new);
+void				ft_lstaddwhere(t_list **alst, t_list *new, int i);
+void				ft_lstaddwheredel(t_list **alst, int i);
 
 #endif
