@@ -34,7 +34,7 @@ int main()
 	ft_lstaddend(&lis, lis3);
 	ft_lstaddend(&lis, lis4);
 	ft_lstaddend(&lis, lis5);
-	ft_lstdelwhere(&lis, 99999);
+	ft_lstdelwhere(&lis, 1);
 	while (lis)
 	{
 		printf("%s - %zu\n", (char*)lis->content, lis->content_size);

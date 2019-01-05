@@ -72,7 +72,8 @@ SRC = ft_lstadd.c\
 	  ft_memchr.c\
 	  ft_putnbr_fd.c\
 	  ft_striter.c\
-	  ft_strnew.c
+	  ft_strnew.c\
+	  ft_lstdelwhere.c
 
 OBJ = ft_lstadd.o\
 	  ft_memcmp.o\
@@ -134,7 +135,8 @@ OBJ = ft_lstadd.o\
 	  ft_memchr.o\
 	  ft_putnbr_fd.o\
 	  ft_striter.o\
-	  ft_strnew.o
+	  ft_strnew.o\
+	  ft_lstdelwhere.o
 
 INC = libft.h
 
@@ -142,7 +144,7 @@ all: $(NAME)
 
 
 $(NAME): $(SRC)
-	gcc -Wall -Wextra -Werror -c $(SRC) -I $(INC)
+	gcc -c $(SRC) -I $(INC)
 	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

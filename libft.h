@@ -83,6 +83,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_intlen(int n);
 void				ft_lstaddend(t_list **alst, t_list *new);
 void				ft_lstaddwhere(t_list **alst, t_list *new, int i);
-void				ft_lstaddwheredel(t_list **alst, int i);
+void				ft_lstdelwhere(t_list **alst, int i);
 
 #endif

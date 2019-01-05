@@ -15,7 +15,7 @@
 
 static void		ft_del(void *content, size_t content_size)
 {
-	free((char*)content);
+	free(content);
 	content = NULL;
 	content_size = 0;
 }

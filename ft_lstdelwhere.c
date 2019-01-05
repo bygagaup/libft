@@ -11,34 +11,37 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static void		ft_del(void *content, size_t content_size)
 {
-	free((char*)content);
+	free(content);
 	content = NULL;
 	content_size = 0;
 }
 
-void	ft_lstaddwheredel(t_list **alst, int i)
+void	ft_lstdelwhere(t_list **alst, int i)
 {
 	t_list	*tmp;
+	t_list	*zam;
 	int		j;
 
 	j = 1;
 	tmp = *alst;
 	if (i > 0)
 	{
-		while (j < i && tmp->next)
+		while (j < i && tmp->next->next)
 		{
 			tmp = tmp->next;
 			j++;
 		}
-		ft_lstdelone(&tmp, 
-		tmp->next = new;
+		zam = tmp->next->next;
+		ft_lstdelone(&tmp->next, &ft_del); 
+		tmp->next = zam;
 	}
 	else
 	{
-		new->next = tmp;
-		*alst = new;
+		*alst = tmp->next;
+		ft_lstdelone(&tmp, &ft_del); 
 	}
 }
